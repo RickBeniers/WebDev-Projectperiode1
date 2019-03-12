@@ -14,24 +14,27 @@
     background-color: blue;
     border: 1px solid black;
     height: 655px;
-    width: 1000px;
+    width: 1687px;
     margin-top: 10px;
 }
 #playerCount{
     background-color: black;
     border: 1px solid black;
     height: 75px;
-    width: 150px;
+    width: 500px;
+    float: left;
 }
 #QuizCreationScreen{
     background-color: yellow;
     border: 1px solid black;
     height: 120px;
-    width: 200px;
+    width: 500px;
+    float: right;
 }
 #QuizQuestionCreationScreen{
     background-color: olivedrab;
     border: 1px solid black;
     height: 150px;
-    width: 250px;
+    width: 550px;
+    
 }
