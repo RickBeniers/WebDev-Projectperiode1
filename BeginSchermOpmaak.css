@@ -1,40 +1,49 @@
 /* write something something */
 
 #beginScherm{
-    background-color: chartreuse;
+    /*background-color: chartreuse;*/
     border: 1px solid black;
 }
 #Header{
-    background-color: red;
+    /*background-color: red;*/
     border: 1px solid black;
     height: 150px;
     width: 1687px;
 }
 #StartScreen{
-    background-color: blue;
+    /*background-color: blue;*/
     border: 1px solid black;
     height: 655px;
     width: 1687px;
     margin-top: 10px;
 }
 #playerCount{
-    background-color: black;
+    /*background-color: black;*/
     border: 1px solid black;
-    height: 75px;
-    width: 500px;
+    height: 625px;
+    width: 400px;
     float: left;
+    margin-left: 1%;
+    margin-top: 1%;
 }
 #QuizCreationScreen{
-    background-color: yellow;
+    /*background-color: yellow;*/
     border: 1px solid black;
-    height: 120px;
-    width: 500px;
+    height: 625px;
+    width: 615px;
     float: right;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    
 }
 #QuizQuestionCreationScreen{
-    background-color: olivedrab;
+    /*background-color: olivedrab;*/
     border: 1px solid black;
-    height: 150px;
-    width: 550px;
+    height: 625px;
+    width: 625px;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    margin-top: 1%;
     
 }
