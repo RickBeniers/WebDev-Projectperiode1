@@ -1,14 +1,26 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="BeginSchermOpmaak.css">
+        <link rel="javacriptsheet" type="javascript" href="Scripts.js"> 
     </head>
     <body id="beginScherm">
+        
         <div id="Header"> 
             <h5> this is the header with all general information </h5>
         </div>
+        
         <div id="StartScreen"> 
+            
             <div id="playerCount"> 
                 <h5> this is the player count Tab, all current players are listed here and new players can be add as well as removed.</h5>
+                
+                
+                <div id="addPlayerField">
+                    <form>
+                        email invite: <input type="email" name="fname"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
+                    </form>
+                </div>
+                <h3 id="player01">-placeholder- player01</h3>
             </div>
             <div id="QuizCreationScreen"> 
                 <h5> this is the Quiz Creation Screen, a quiz can be created from here.</h5>
@@ -16,6 +28,7 @@
             <div id="QuizQuestionCreationScreen"> 
                 <h5> this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
             </div>
+            
         </div>
         
     </body>
