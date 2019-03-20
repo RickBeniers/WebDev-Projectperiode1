@@ -59,3 +59,21 @@
 {
     margin-left: 5%;
 }
+#adminNaam{
+    border: 1px solid black;
+    height: 1%;
+    width: 10%;
+    margin-left: 5%;
+}
+#Timer{
+    border: 1px solid black; 
+    height: 1%;
+    width: 10%;
+    margin-left: 5%;
+}
+#Datum{
+    border: 1px solid black;
+    height: 1%;
+    width: 10%;
+    margin-left: 5%;
+}
