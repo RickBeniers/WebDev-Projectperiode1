@@ -1,1 +1,40 @@
-/* CSS voor eindscherm */
+
+
+#body{
+    background-color:greenyellow;
+}
+#Header{
+    background-color:hotpink;
+    border: 1px solid black;
+    height: 150px;
+    width: 1520px;
+}
+#eindscherm{
+    background-color: blue;
+    height: 555px;
+    width: 1520px;
+    margin-top: 10px;
+}
+#playerLIST{
+    background-color: orange;
+    height: 540px;
+    width: 800px;
+    margin: 5px;
+}
+
+#random_text{
+    background-color:aqua;
+    height: 540px;
+    width: 700px;
+    float:right;
+    margin: 5px;
+}
+
+#button{
+    background-color: yellow;
+    height: 40px;
+    width: 135px;
+    margin-top: 400px;
+    margin-left: 330px
+}
+
