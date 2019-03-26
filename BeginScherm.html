@@ -7,8 +7,10 @@
         
         <div id="Header"> 
             <h3 id="Datum"></h3>
-            <h3 id="adminNaam"></h3>
-            <h3 id="Timer"></h3>
+                <div id="headerDiv">
+                    <h3 id="adminNaam">gebruikers naam</h3>
+                    <h3 id="Timer">Quiz timer</h3>
+                </div>
             <h5> this is the header with all general information </h5>
         </div>
         
@@ -20,19 +22,58 @@
                 
                 <div id="addPlayerField">
                     <form>
-                        email invite: <input type="email" name="fname"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
+                        <input type="email" placeholder="fill in email" name="fname"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
                     </form>
                 </div>
                 <h3 id="player01">-placeholder- player01</h3>
             </div>
             <div id="QuizCreationScreen"> 
-                <h5> this is the Quiz Creation Screen, a quiz can be created from here.</h5>
+                <h5>this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
+                <form>
+                    <input type="text" placeholder="Question name" name="QN"><br>
+                    <input type="text" placeholder="Answer 1" name="A1"><input id="checkboxA1" type="checkbox"><br>
+                    <input type="text" placeholder="Answer 2" name="A2"><input id="checkboxA2" type="checkbox"><br>
+                    <input type="text" placeholder="Answer 3" name="A3"><input id="checkboxA3" type="checkbox"><br>
+                    <input type="text" placeholder="Answer 4" name="A4"><input id="checkboxA4" type="checkbox"><br>
+                    
+                    <button>terug</button>
+                    <button>create</button>
+                    <button>vooruit</button>
+                    
+                </form>
             </div>
             <div id="QuizQuestionCreationScreen"> 
-                <h5> this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
+                <h5>this is the Quiz Creation Screen, a quiz can be created from here.</h5>
+                <form>
+                    <input type="text" placeholder="Quiz name" name="QN"><br>
+                    <input type="number" placeholder="how many questions" name="QA"><br>
+                    <input type="number" placeholder="how many answers" name="AA"><br>
+                    <input type="number" placeholder="Timer amount" name="TA"><br>
+                    <button id="addPlayer" onclick="addPlayer()">Create</button><br>
+                </form>
+                <h4>lijst met vragen</h4>
+                <h4>lijst met antwoorden</h4>
             </div>
             
         </div>
-        
+        <script>
+            window.onload = setInterval(clock,1000);
+            function clock()
+            {
+                var minutes = 1000 * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var d = new date();
+                var t = d.getTime();
+                var date = d.getDate();
+                var year = d.getFullYear();
+                var month = d.getMonth();
+                var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+                //var y =t + " " + date + " " + month + " " + year;
+                month = monthArr[month];
+                document.getElementById("Datum").innerHTML= t + " " + date + " " + month + " " + year;
+            }
+        </script>
     </body>
 </html>
