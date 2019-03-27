@@ -95,3 +95,54 @@
     margin-left: 75%;
     margin-top: 1%;
 }
+#QCSname{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+}
+#QCS1{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+#QCS2{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+#QCS3{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+#QCS4{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+#checkboxA1{
+    
+}
+#checkboxA2{
+    
+}
+#checkboxA3{
+    
+}
+#checkboxA4{
+    
+}
+.checkboxInfo{
+    height: 5%;
+    width: 5%;
+}
+#buttonDiv{
+    height: 1%;
+    width: 50%;
+    margin-left: 35%;
+}
+
