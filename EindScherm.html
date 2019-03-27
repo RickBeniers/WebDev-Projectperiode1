@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="EindSchermOpmaak.css">
     </head>
-    <body id="body">
+    <body>
         <div id="Header"> Naam admin dave <br> datum: 26/03/2019 </div>
         <div id="eindscherm">
             <div id="random_text">
@@ -12,18 +12,22 @@
                 </div>
             </div>
             <div id="playerLIST">
-                <ol type="1">
-                    <h2><li>panda_64</li></h2>
-                    <h2><li>carl_the_man</li></h2>
-                    <h2><li>jake</li></h2>
-                    <h2><li>ben147127</li></h2>
-                    <h2><li>F.U</li></h2>
-                    <h2><li>bandict</li></h2>
-                    <h2><li>kip</li></h2>
-                    <h2><li>carl_sucks</li></h2>
-                    <h2><li>james</li></h2>
-                    <h2><li>ben157126</li></h2>
-                </ol>
+                
+                <p id="player_name"></p>
+
+<script>
+var player, text, fLen, i;
+player = ["panda_64", "carl_the_man", "jake", "ben147127","F.U", "bandict", "kip", "carl_sucks"];
+fLen = player.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + player[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("player_name").innerHTML = text;
+</script>
             </div>
         </div>
         
