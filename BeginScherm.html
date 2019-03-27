@@ -60,19 +60,8 @@
             window.onload = setInterval(clock,1000);
             function clock()
             {
-                var minutes = 1000 * 60;
-                var hours = minutes * 60;
-                var days = hours * 24;
-                var years = days * 365;
-                var d = new date();
-                var t = d.getTime();
-                var date = d.getDate();
-                var year = d.getFullYear();
-                var month = d.getMonth();
-                var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
-                //var y =t + " " + date + " " + month + " " + year;
-                month = monthArr[month];
-                document.getElementById("Datum").innerHTML= t + " " + date + " " + month + " " + year;
+                var y = new Date();
+                document.getElementById("Datum").innerHTML= y;
             }
         </script>
     </body>
