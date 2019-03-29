@@ -37,23 +37,23 @@
                     <input id="QCS4" type="text" placeholder="Answer 4" name="A4"><input class="checkboxInfo" id="checkboxA4" type="checkbox"><br>
                     
                     <div id="buttonDiv">
-                        <button>terug</button>
-                        <button>create</button>
-                        <button>vooruit</button>
+                        <button class="QuestionButton">terug</button>
+                        <button class="QuestionButton">create</button>
+                        <button class="QuestionButton">vooruit</button>
                     </div>
                 </form>
             </div>
             <div id="QuizQuestionCreationScreen"> 
                 <h5>this is the Quiz Creation Screen, a quiz can be created from here.</h5>
                 <form>
-                    <input type="text" placeholder="Quiz name" name="QN"><br>
-                    <input type="number" placeholder="how many questions" name="QA"><br>
-                    <input type="number" placeholder="how many answers" name="AA"><br>
-                    <input type="number" placeholder="Timer amount" name="TA"><br>
-                    <button id="addPlayer" onclick="addPlayer()">Create</button><br>
+                    <input id="QN" type="text" placeholder="Quiz name" name="QN"><br>
+                    <input id="QA" type="number" placeholder="how many questions" name="QA"><br>
+                    <input id="AA" type="number" placeholder="how many answers" name="AA"><br>
+                    <input id="TA" type="number" placeholder="Timer amount" name="TA"><br>
+                    <button id="addPlayer02" onclick="addPlayer()">Create</button><br>
                 </form>
-                <h4>lijst met vragen</h4>
-                <h4>lijst met antwoorden</h4>
+                <h4 id="vragenlijst">lijst met vragen</h4>
+                <h4 id="antwoordenlijst">lijst met antwoorden</h4>
             </div>
             
         </div>

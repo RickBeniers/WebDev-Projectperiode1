@@ -141,8 +141,52 @@
     width: 5%;
 }
 #buttonDiv{
-    height: 1%;
-    width: 50%;
-    margin-left: 35%;
+    height: 50%;
+    width: 51%;
+    margin-left: 25%;
 }
-
+#QN{
+    height:5% ;
+    width:50% ;
+    margin-left: 25%;
+}
+#QA{
+    height: 5%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+#AA{
+    height: 5%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%; 
+}
+#TA{
+    height: 5%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%; 
+}
+#addPlayer02{
+    height: 5%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%; 
+}
+#vragenlijst{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%; 
+}
+#antwoordenlijst{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%; 
+}
+.QuestionButton{
+    height: 10%;
+    width: 32%;
+}
