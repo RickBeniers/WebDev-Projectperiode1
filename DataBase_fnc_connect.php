@@ -7,18 +7,19 @@
 
 <?php 
         
-                
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "kahboom";
+                function Connection(){
+                    
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "kahboom";
 
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
                 
-                if (!$conn) {
-                                die("Connection failed: " . mysqli_connect_error());
-                            }  
-         
+                    if (!$conn) {
+                                    die("Connection failed: " . mysqli_connect_error());
+                                }  
+                }
 ?>
             
 </body>
