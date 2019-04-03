@@ -7,7 +7,7 @@
 
 <?php 
         
-                function Connection(){
+                
                     
                     $servername = "localhost";
                     $username = "root";
@@ -19,7 +19,7 @@
                     if (!$conn) {
                                     die("Connection failed: " . mysqli_connect_error());
                                 }  
-                }
+                
 ?>
             
 </body>

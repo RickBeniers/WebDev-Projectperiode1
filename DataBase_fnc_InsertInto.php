@@ -10,7 +10,6 @@
         <?php 
             function InsertEmailIntoDataBase()
             {
-                connect();
         
                 $bericht = mysqli_real_escape_string($conn,($bericht));
                 $bericht = htmlspecialchars($bericht);  
