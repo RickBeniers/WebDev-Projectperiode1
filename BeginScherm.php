@@ -27,10 +27,10 @@
                 
                 <div id="addPlayerField">
                     <form>
-                        <input type="email" placeholder="fill in email" name="Emailname"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
+                        <input type="email" placeholder="fill in email" name="emailbericht"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
                     </form>
                     <?php
-                        $bericht = ($_POST["Emailname"]);
+                        $bericht = ($_POST['emailbericht']);
                         InsertEmailIntoDataBase($bericht);
                     ?>
                 </div>
