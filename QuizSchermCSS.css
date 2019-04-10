@@ -1,0 +1,78 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Hele_Pagina {
+    background-color: lime;
+}
+
+.infoDiv {
+    background-color: aqua;
+    padding: 0px;
+    margin: 0px;
+}
+
+.puntenDiv {
+
+}
+
+#countdown {
+    padding-right: 5%;
+}
+
+.vraagDiv {
+    margin: 0 auto;
+    text-align: center;
+    margin: 14%;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto 4%;
+    background-color: #2196F3;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 6%;
+    font-size: 30px;
+    text-align: center;
+}
+.contentDiv{
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: auto;
+    height: fit-content !important;
+    background-color: lightblue;
+
+}
+.vraagDiv {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: auto;
+    height: ;
+    background-color: red;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
