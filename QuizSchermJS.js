@@ -5,6 +5,6 @@ var downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
         clearInterval(downloadTimer);
         //volgende vraag.
-    document.getElementById("countdown").innerHTML = timeleft ;
+        document.getElementById("countdown").innerHTML = timeleft;
     }
 }, 1000);

@@ -1,4 +1,5 @@
-body {
+
+html, body {
     height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -6,20 +7,35 @@ body {
 
 .Hele_Pagina {
     background-color: lime;
+
+
+    height: 100%;
+    flex-direction: column;
+
 }
 
 .infoDiv {
     background-color: aqua;
     padding: 0px;
     margin: 0px;
+
 }
 
 .puntenDiv {
+    height: 100%;
+}
 
+.header {
+    height: 10%;
+    background-color: purple;
 }
 
 #countdown {
     padding-right: 5%;
+}
+
+.pClass {
+    margin: 0 auto;
 }
 
 .vraagDiv {
@@ -34,6 +50,8 @@ body {
     background-color: #2196F3;
     padding: 10px;
     border-radius: 10px;
+    border-radius: 10px;
+    height: 100%;
 }
 
 .grid-container2 {
@@ -41,6 +59,7 @@ body {
     grid-template-columns: auto auto;
     background-color: #2196F3;
     padding: 10px;
+    height: 100%;
 }
 
 .grid-item {
@@ -75,4 +94,45 @@ body {
     bottom: 0;
     width: 100%;
     height: auto;
+    /*padding: 6%;*/
+    font-size: 30px;
+    text-align: center;
+}
+
+content {
+    /*display: flex;*/
+    flex-direction: column;
+    height: 60%;
+    background-color: blue;
+}
+
+.contentDiv {
+    /*flex: 1;*/
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    /*padding: 20px;*/
+    width: auto;
+    background-color: lightblue;
+    height: 67.5%;
+}
+
+.vraagDiv {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    /*padding: 20px;*/
+    width: auto;
+
+    background-color: red;
+}
+
+.footer {
+    /*position: absolute;
+    bottom: 0;*/
+    background-color: red;
+    width: 100%;
+    height: 20%;
+}
+
+.puntenDiv {
+    text-align: center;
 }

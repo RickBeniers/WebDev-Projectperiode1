@@ -2,17 +2,18 @@
 <html>
 <head>
     <title>Quiz Scherm</title>
-    <link rel="stylesheet" type="text/css" href="indexCSS.css">
-    <script src="indexJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="QuizSchermCSS.css">
+    <script src="QuizSchermJS.js"></script>
+
 </head>
 
 <body>
 <container class="Hele_Pagina">
-    <header>
+    <header class="header">
         <div class="infoDiv">
             <div class="grid-container1">
                 <div class="puntenDiv">
-                    <p>Punten div</p>
+                    <p class="pClass">$punten</p>
                 </div>
                 <div class="usernameDiv">
                     <p>$username</p>
@@ -24,7 +25,8 @@
         </div>
     </header>
 
-    <content>
+    <content class="content">
+
         <div class="contentDiv">
             <div id="rcornersContent" class="vraagDiv">
                 <h2>Hier komen de vragen van de div. </h2>
@@ -32,15 +34,13 @@
         </div>
     </content>
     <footer class="footer">
-        <div>
-            <div class="grid-container2">
-                <div class="grid-item">Antwoord A</div>
-                <div class="grid-item">Antwoord B</div>
-                <div class="grid-item">Antwoord C</div>
-                <div class="grid-item">Antwoord D</div>
-            </div>
-        </div>
 
+        <div class="grid-container2">
+            <div class="grid-item">Antwoord A</div>
+            <div class="grid-item">Antwoord B</div>
+            <div class="grid-item">Antwoord C</div>
+            <div class="grid-item">Antwoord D</div>
+        </div>
     </footer>
 </container>
 </body>
