@@ -1,6 +1,6 @@
 <html>
     <head>
-        
+        //change.
         <link rel="stylesheet" type="text/css" href="BeginSchermOpmaak.css">
         <script src="Scripts.js" type="javascript"></script> 
         <?php
