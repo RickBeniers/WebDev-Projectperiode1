@@ -9,7 +9,7 @@
 
         <?php 
                 
-            function InsertEmailIntoDataBase($bericht)
+            function InsertEmailIntoDataBase($emailbericht)
             {
                 $servername = "localhost";
                 $username = "root";
@@ -22,8 +22,8 @@
                                 die("Connection failed: " . mysqli_connect_error());
                             }  
         
-                $bericht = mysqli_real_escape_string($conn,($bericht));
-                $bericht = htmlspecialchars($bericht);  
+                $emailbericht = mysqli_real_escape_string($conn,($emailbericht));
+                $emailbericht = htmlspecialchars($bericht);  
                 $sql = "INSERT INTO gebruiker(E-mail) values('beniersrick@gmail.com')"; 
             }
         ?>
