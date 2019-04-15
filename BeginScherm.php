@@ -1,6 +1,5 @@
 <html>
     <head>
-        //change.
         <link rel="stylesheet" type="text/css" href="BeginSchermOpmaak.css">
         <script src="Scripts.js" type="javascript"></script> 
         <?php
@@ -26,19 +25,22 @@
                 
                 
                 <div id="addPlayerField">
-                    <form>
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <input type="email" placeholder="fill in email" name="emailbericht"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
                     </form>
                     <?php
-                        $emailbericht = ($_POST['bericht']);
-                        InsertEmailIntoDataBase($emailbericht);
+                        if(isset($_POST['emailbericht']))
+                        {
+                            $bericht = ($_POST['emailbericht']);
+                            InsertEmailIntoDataBase($bericht);
+                        }
                     ?>
                 </div>
                 <h3 id="player01">-placeholder- player01</h3>
             </div>
             <div id="QuizCreationScreen"> 
                 <h5>this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
-                <form>
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <input id="QCSname" type="text" placeholder="formulate a Question here" name="QN"><br>
                     <input id="QCS1" type="text" placeholder="Answer 1" name="A1"><input class="checkboxInfo" id="checkboxA1" type="checkbox"><br>
                     <input id="QCS2" type="text" placeholder="Answer 2" name="A2"><input class="checkboxInfo" id="checkboxA2" type="checkbox"><br>
@@ -51,10 +53,37 @@
                         <button class="QuestionButton">vooruit</button>
                     </div>
                 </form>
+                <?php
+                        if(isset($_POST['QN']))
+                        {
+                            $bericht02 = ($_POST['QN']);
+                            InsertQuestionIntoDatabase($bericht02);
+                        }
+                        if(isset($_POST['A1']))
+                        {
+                            $bericht03 = ($_POST['A1'])
+                            InsertQuestionIntoDatabase($bericht03);
+                        }
+                        if(isset($_POST['A2']))
+                        {
+                            $bericht04 = ($_POST['A2'])
+                            InsertQuestionIntoDatabase($bericht04);
+                        }
+                        if(isset($_POST['A3']))
+                        {
+                            $bericht05 = ($_POST['A3'])
+                            InsertQuestionIntoDatabase($bericht05);
+                        }
+                        if(isset($_POST['A4']))
+                        {
+                            $bericht06 = ($_POST['A4'])
+                            InsertQuestionIntoDatabase($bericht06);
+                        }
+                    ?>
             </div>
             <div id="QuizQuestionCreationScreen"> 
                 <h5>this is the Quiz Creation Screen, a quiz can be created from here.</h5>
-                <form>
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <input id="QN" type="text" placeholder="Quiz name" name="QN"><br>
                     <input id="QA" type="number" placeholder="how many questions" name="QA"><br>
                     <input id="AA" type="number" placeholder="how many answers" name="AA"><br>
