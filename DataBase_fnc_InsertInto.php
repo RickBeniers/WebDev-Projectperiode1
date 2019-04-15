@@ -24,7 +24,13 @@
         
                 $bericht = mysqli_real_escape_string($conn,($bericht));
                 $bericht = htmlspecialchars($bericht);  
-                $sql = "INSERT INTO gebruiker(E-mail) values('beniersrick@gmail.com')"; 
+                $sql = "INSERT INTO gebruiker(Email) values('$bericht')";
+                if (mysqli_multi_query($conn, $sql)) {
+                    echo "new Data created";
+                }else{ 
+                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                      }
+                        $conn->close();
             }
         ?>
             

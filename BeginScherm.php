@@ -30,7 +30,7 @@
                         <input type="email" placeholder="fill in email" name="emailbericht"><button id="addPlayer" onclick="addPlayer()">Invite player</button><br>
                     </form>
                     <?php
-                        $bericht = ($_POST['emailbericht']);
+                        $bericht = $_POST["emailbericht"];
                         InsertEmailIntoDataBase($bericht);
                     ?>
                 </div>
