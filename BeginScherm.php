@@ -33,6 +33,8 @@
                         {
                             $bericht = ($_POST['emailbericht']);
                             InsertEmailIntoDataBase($bericht);
+                        }else{
+                            echo"Failed! data not loaded Error A1";
                         }
                     ?>
                 </div>
@@ -42,56 +44,60 @@
                 <h5>this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <input id="QCSname" type="text" placeholder="formulate a Question here" name="QN"><br>
-                    <input id="QCS1" type="text" placeholder="Answer 1" name="A1"><input class="checkboxInfo" id="checkboxA1" type="checkbox"><br>
-                    <input id="QCS2" type="text" placeholder="Answer 2" name="A2"><input class="checkboxInfo" id="checkboxA2" type="checkbox"><br>
-                    <input id="QCS3" type="text" placeholder="Answer 3" name="A3"><input class="checkboxInfo" id="checkboxA3" type="checkbox"><br>
-                    <input id="QCS4" type="text" placeholder="Answer 4" name="A4"><input class="checkboxInfo" id="checkboxA4" type="checkbox"><br>
+                    <input id="QCS1" type="text" placeholder="Answer 1" name="A1"><input class="checkboxInfo" id="checkboxA1" type="checkbox" name="checkbox1"><br>
+                    <input id="QCS2" type="text" placeholder="Answer 2" name="A2"><input class="checkboxInfo" id="checkboxA2" type="checkbox" name="checkbox2"><br>
+                    <input id="QCS3" type="text" placeholder="Answer 3" name="A3"><input class="checkboxInfo" id="checkboxA3" type="checkbox" name="checkbox3"><br>
+                    <input id="QCS4" type="text" placeholder="Answer 4" name="A4"><input class="checkboxInfo" id="checkboxA4" type="checkbox" name="checkbox4"><br>
                     
                     <div id="buttonDiv">
-                        <button class="QuestionButton">terug</button>
-                        <button class="QuestionButton">create</button>
-                        <button class="QuestionButton">vooruit</button>
+                        <button class="QuestionButton" name="TB">terug</button>
+                        <button class="QuestionButton" name="CB">create</button>
+                        <button class="QuestionButton" name="VB">vooruit</button>
                     </div>
                 </form>
                 <?php
-                        if(isset($_POST['QN']))
+                        if(isset($_POST['CB']))
                         {
+                            if(isset($_POST['checkbox1'])||($_POST['checkbox2'])||($_POST['checkbox3'])||($_POST['checkbox4']))
+                            {
+                                $checkbox = 1;
+                            }else{
+                                echo"please, mark 1 answer as correct.";
+                            }
                             $bericht02 = ($_POST['QN']);
-                            InsertQuestionIntoDatabase($bericht02);
-                        }
-                        if(isset($_POST['A1']))
-                        {
-                            $bericht03 = ($_POST['A1'])
-                            InsertQuestionIntoDatabase($bericht03);
-                        }
-                        if(isset($_POST['A2']))
-                        {
-                            $bericht04 = ($_POST['A2'])
-                            InsertQuestionIntoDatabase($bericht04);
-                        }
-                        if(isset($_POST['A3']))
-                        {
-                            $bericht05 = ($_POST['A3'])
-                            InsertQuestionIntoDatabase($bericht05);
-                        }
-                        if(isset($_POST['A4']))
-                        {
-                            $bericht06 = ($_POST['A4'])
-                            InsertQuestionIntoDatabase($bericht06);
+                            $bericht03 = ($_POST['A1']);
+                            $bericht04 = ($_POST['A2']);
+                            $bericht05 = ($_POST['A3']);
+                            $bericht06 = ($_POST['A4']);
+                            InsertQuestionIntoDatabase($bericht02, $bericht03, $bericht04, $bericht05, $bericht06, $checkbox);
+                        }else{
+                            echo"Failed! data no loaded Error A2";
                         }
                     ?>
             </div>
             <div id="QuizQuestionCreationScreen"> 
                 <h5>this is the Quiz Creation Screen, a quiz can be created from here.</h5>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                    <input id="QN" type="text" placeholder="Quiz name" name="QN"><br>
+                    <input id="QN" type="text" placeholder="Quiz name" name="QQN"><br>
                     <input id="QA" type="number" placeholder="how many questions" name="QA"><br>
                     <input id="AA" type="number" placeholder="how many answers" name="AA"><br>
                     <input id="TA" type="number" placeholder="Timer amount" name="TA"><br>
-                    <button id="addPlayer02" onclick="addPlayer()">Create</button><br>
+                    <button id="addPlayer02" name="CreateQuiz">Create</button><br>
                 </form>
-                <h4 id="vragenlijst">lijst met vragen</h4>
-                <h4 id="antwoordenlijst">lijst met antwoorden</h4>
+                <h4 id="vragenlijst">lijst met vragen <?php ?></h4>
+                <h4 id="antwoordenlijst">lijst met antwoorden <?php ?></h4>
+                <?php 
+                    if(isset($_POST['QQN']))
+                    {
+                        $QuizNameInput = ($_POST['QQN']) ;
+                        $AmountAllowedQuestions = ($_POST['QA']);
+                        $AmountAllowedAnswers = ($_POST['AA']);
+                        $AmountQuizTimer = ($_POST['TA']);
+                        InsertQuizInfoIntoDatabase($QuizNameInput, $AmountAllowedQuestions, $AmountAllowedAnswers, $AmountQuizTimer);
+                    }else{
+                        echo"Failed! data not loaded Error A3";
+                    }
+                ?>
             </div>
             
         </div>
