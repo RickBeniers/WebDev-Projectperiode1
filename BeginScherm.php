@@ -34,7 +34,7 @@
                             $bericht = ($_POST['emailbericht']);
                             InsertEmailIntoDataBase($bericht);
                         }else{
-                            echo"Failed! data not loaded Error A1";
+                            echo"Failed! data not loaded Error E1";
                         }
                     ?>
                 </div>
@@ -42,7 +42,7 @@
             </div>
             <div id="QuizCreationScreen"> 
                 <h5>this is the quiz question creation screen, from here questions for the quiz can be created after a quiz has been created. </h5>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <form id="formuliertje"action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <input id="QCSname" type="text" placeholder="formulate a Question here" name="QN"><br>
                     <input id="QCS1" type="text" placeholder="Answer 1" name="A1"><input class="checkboxInfo" id="checkboxA1" type="checkbox" name="checkbox1"><br>
                     <input id="QCS2" type="text" placeholder="Answer 2" name="A2"><input class="checkboxInfo" id="checkboxA2" type="checkbox" name="checkbox2"><br>
@@ -54,8 +54,8 @@
                         <button class="QuestionButton" name="CB">create</button>
                         <button class="QuestionButton" name="VB">vooruit</button>
                     </div>
-                </form>
-                <?php
+                
+                    <?php
                         if(isset($_POST['CB']))
                         {
                             if(isset($_POST['checkbox1'])||($_POST['checkbox2'])||($_POST['checkbox3'])||($_POST['checkbox4']))
@@ -71,9 +71,10 @@
                             $bericht06 = ($_POST['A4']);
                             InsertQuestionIntoDatabase($bericht02, $bericht03, $bericht04, $bericht05, $bericht06, $checkbox);
                         }else{
-                            echo"Failed! data no loaded Error A2";
+                            echo"Failed! data not loaded Error E2";
                         }
                     ?>
+                </form>
             </div>
             <div id="QuizQuestionCreationScreen"> 
                 <h5>this is the Quiz Creation Screen, a quiz can be created from here.</h5>
@@ -95,7 +96,7 @@
                         $AmountQuizTimer = ($_POST['TA']);
                         InsertQuizInfoIntoDatabase($QuizNameInput, $AmountAllowedQuestions, $AmountAllowedAnswers, $AmountQuizTimer);
                     }else{
-                        echo"Failed! data not loaded Error A3";
+                        echo"Failed! data not loaded Error E3";
                     }
                 ?>
             </div>
