@@ -2,20 +2,22 @@
 
 #beginScherm{
     background-color: lightblue;
+    width: 100%;
+    height: 100%;
     /*border: 1px solid black;*/
 }
 #Header{
     background-color: lightblue;
     border: 1px solid black;
-    height: 150px;
-    width: 1687px;
+    height: 20%;
+    width: 100%;
     
 }
 #StartScreen{
     background-color: lightblue;
     border: 1px solid black;
     height: 655px;
-    width: 1687px;
+    width: 100%;
     margin-top: 10px;
 }
 #playerCount{

@@ -103,6 +103,7 @@
         </div>
         <script>
             window.onload = setInterval(clock,1000);
+            //window.onload = setInterval(refresh,10000);
             function clock()
             {
                 
@@ -113,6 +114,11 @@
                 document.getElementById("Datum").innerHTML = days[d.getDay()] + " " + d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear() + " " + "0" + d.getHours() + ":" + d.getMinutes() + " " + d.getSeconds();
         
             }
+            function refresh()
+            {
+                document.location.reload();
+            }
+            
         </script>
     </body>
 </html>
