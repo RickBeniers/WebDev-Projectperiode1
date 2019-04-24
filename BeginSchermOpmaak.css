@@ -186,7 +186,9 @@
     height: 10%;
     width: 50%;
     margin-left: 25%;
-    margin-top: 5%; 
+    margin-top: 10%; 
+    background-color: none;
+    /*border: 1px solid black;*/
 }
 .QuestionButton{
     height: 10%;

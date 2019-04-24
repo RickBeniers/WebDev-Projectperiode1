@@ -4,6 +4,7 @@
         <script src="Scripts.js" type="javascript"></script> 
         <?php
             include_once"DataBase_fnc_InsertInto.php";
+            include_once"DataBase_fnc_Select.php";
         ?>
         
     </head>
@@ -85,8 +86,8 @@
                     <input id="TA" type="number" placeholder="Timer amount" name="TA"><br>
                     <button id="addPlayer02" name="CreateQuiz">Create</button><br>
                 </form>
-                <h4 id="vragenlijst">lijst met vragen <?php ?></h4>
-                <h4 id="antwoordenlijst">lijst met antwoorden <?php ?></h4>
+                <h4 id="vragenlijst"><b>lijst met vragen<br></b><?php DataSelectVragen() ?></h4>
+                <h4 id="antwoordenlijst"><b>lijst met antwoorden<br></b><?php DataSelectAntwoord() ?></h4>
                 <?php 
                     if(isset($_POST['QQN']))
                     {
@@ -95,7 +96,7 @@
                         $AmountAllowedAnswers = ($_POST['AA']);
                         $AmountQuizTimer = ($_POST['TA']);
                         InsertQuizInfoIntoDatabase($QuizNameInput, $AmountAllowedQuestions, $AmountAllowedAnswers, $AmountQuizTimer);
-                    }else{
+                    }elseif($_POST['QQN']){
                         echo"Failed! data not loaded Error E3";
                     }
                 ?>
